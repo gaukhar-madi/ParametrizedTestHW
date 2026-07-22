@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SelenideWebTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-07-22T11:10:39" hostname="MacBook-Pro-Gaukhar.local" time="10.241">
+  <properties/>
+  <testcase name="Заполнить тэги: Java" classname="SelenideWebTest" time="7.447"/>
+  <testcase name="Заполнить тэги: C++" classname="SelenideWebTest" time="0.178"/>
+  <testcase name="Заполнить тэги: C#" classname="SelenideWebTest" time="0.157"/>
+  <testcase name="Заполнить тэги: Python" classname="SelenideWebTest" time="0.138"/>
+  <testcase name="Заполнить тэги: PHP" classname="SelenideWebTest" time="0.131"/>
+  <testcase name="Поставить звездочку и проверить получаемый текст, рейтинг 1" classname="SelenideWebTest" time="0.365"/>
+  <testcase name="Поставить звездочку и проверить получаемый текст, рейтинг 2" classname="SelenideWebTest" time="0.131"/>
+  <testcase name="Поставить звездочку и проверить получаемый текст, рейтинг 3" classname="SelenideWebTest" time="0.116"/>
+  <testcase name="Поставить звездочку и проверить получаемый текст, рейтинг 4" classname="SelenideWebTest" time="0.126"/>
+  <testcase name="Поставить звездочку и проверить получаемый текст, рейтинг 5" classname="SelenideWebTest" time="0.118"/>
+  <testcase name="Заполнить таблицы с расходами за сегодня breakfast" classname="SelenideWebTest" time="0.396"/>
+  <testcase name="Заполнить таблицы с расходами за сегодня coffee" classname="SelenideWebTest" time="0.217"/>
+  <testcase name="Заполнить таблицы с расходами за сегодня cream" classname="SelenideWebTest" time="0.242"/>
+  <testcase name="Заполнить таблицы с расходами за сегодня groceries" classname="SelenideWebTest" time="0.233"/>
+  <testcase name="Заполнить таблицы с расходами за сегодня taxi" classname="SelenideWebTest" time="0.221"/>
+  <system-out><![CDATA[I've typed new tag name Java
+I've typed new tag name C++
+I've typed new tag name C#
+I've typed new tag name Python
+I've typed new tag name PHP
+Expected total string -$15.00 и Actual total string -$15.00
+Expected total string -$20.00 и Actual total string -$20.00
+Expected total string -$55.00 и Actual total string -$55.00
+Expected total string -$105.00 и Actual total string -$105.00
+Expected total string -$135.00 и Actual total string -$135.00
+]]></system-out>
+  <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+июл. 22, 2026 4:10:39 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("Value Source") declaration on [void SelenideWebTest.selenideShouldFillTheTagsTest(java.lang.String)]. Tag will be ignored.
+июл. 22, 2026 4:10:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+июл. 22, 2026 4:10:45 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.129. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.34.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+июл. 22, 2026 4:10:46 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("Value Source") declaration on [void SelenideWebTest.selenideShouldFillTheTagsTest(java.lang.String)]. Tag will be ignored.
+июл. 22, 2026 4:10:46 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("Value Source") declaration on [void SelenideWebTest.selenideShouldFillTheTagsTest(java.lang.String)]. Tag will be ignored.
+июл. 22, 2026 4:10:47 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("Value Source") declaration on [void SelenideWebTest.selenideShouldFillTheTagsTest(java.lang.String)]. Tag will be ignored.
+июл. 22, 2026 4:10:47 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("Value Source") declaration on [void SelenideWebTest.selenideShouldFillTheTagsTest(java.lang.String)]. Tag will be ignored.
+июл. 22, 2026 4:10:47 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("CSV Source") declaration on [void SelenideWebTest.clickRatingTest(int,java.lang.String)]. Tag will be ignored.
+июл. 22, 2026 4:10:47 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("CSV Source") declaration on [void SelenideWebTest.clickRatingTest(int,java.lang.String)]. Tag will be ignored.
+июл. 22, 2026 4:10:47 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("CSV Source") declaration on [void SelenideWebTest.clickRatingTest(int,java.lang.String)]. Tag will be ignored.
+июл. 22, 2026 4:10:48 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("CSV Source") declaration on [void SelenideWebTest.clickRatingTest(int,java.lang.String)]. Tag will be ignored.
+июл. 22, 2026 4:10:48 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("CSV Source") declaration on [void SelenideWebTest.clickRatingTest(int,java.lang.String)]. Tag will be ignored.
+июл. 22, 2026 4:10:48 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("CSV File Source") declaration on [void SelenideWebTest.BudgetTrackerTest(java.lang.String,int)]. Tag will be ignored.
+июл. 22, 2026 4:10:48 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("CSV File Source") declaration on [void SelenideWebTest.BudgetTrackerTest(java.lang.String,int)]. Tag will be ignored.
+июл. 22, 2026 4:10:48 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("CSV File Source") declaration on [void SelenideWebTest.BudgetTrackerTest(java.lang.String,int)]. Tag will be ignored.
+июл. 22, 2026 4:10:49 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("CSV File Source") declaration on [void SelenideWebTest.BudgetTrackerTest(java.lang.String,int)]. Tag will be ignored.
+июл. 22, 2026 4:10:49 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+WARNING: Configuration error: invalid tag syntax in @Tag("CSV File Source") declaration on [void SelenideWebTest.BudgetTrackerTest(java.lang.String,int)]. Tag will be ignored.
+]]></system-err>
+</testsuite>

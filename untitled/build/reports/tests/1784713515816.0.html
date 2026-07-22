@@ -1,0 +1,193 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Budget Tracker App</title>
+    <meta name="description" content="Add, modify and remove income and expense records and assert their appearance, persistence, and the total amount">
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/main.js"></script>
+    <style>
+      .announcement-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1001;
+        background: linear-gradient(90deg, #4f46e5, #9333ea);
+        color: #fff;
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 0.88rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .announcement-bar .bar-text {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .announcement-bar .bar-cta {
+        display: inline-block;
+        background: #fff;
+        color: #1e1b4b;
+        font-size: 0.82rem;
+        font-weight: 700;
+        padding: 5px 14px;
+        border-radius: 20px;
+        text-decoration: none;
+        white-space: nowrap;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        transition: background 0.15s, transform 0.15s;
+      }
+
+      .announcement-bar .bar-cta:hover {
+        background: #ede9fe;
+        transform: scale(1.04);
+      }
+
+      .topnav {
+        top: 44px !important;
+      }
+
+      main {
+        margin-top: calc(var(--nav-width) + 44px) !important;
+      }
+
+      @media (max-width: 600px) {
+        .announcement-bar {
+          font-size: 0.82rem;
+          padding: 10px 14px;
+          gap: 8px;
+        }
+
+        .topnav {
+          top: 64px !important;
+        }
+
+        main {
+          margin-top: calc(var(--nav-width) + 64px) !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="announcement-bar">
+      <div class="bar-text">
+        ✨ One subscription for every top AI — Claude Fable 5, GPT-5.5, Gemini 3.1 Pro &amp; more.
+      </div>
+      <a class="bar-cta" href="https://www.izzedo.chat/?ref=marko" target="_blank" rel="noopener noreferrer">Try Izzedo Free →</a>
+    </div>
+    <nav class="topnav" style="top: 0px">
+      <div class="" style="padding: 0">
+        <a href="/" class="item logo" style="opacity: 1">
+          <h1><span class="gradient-text">QA Playground</span></h1>
+        </a>
+      </div>
+
+      <div class="topnav-links flex-center hide-sm">
+        <a href="/#apps" class="item item-text" aria-label="full courses">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" width="512" height="512">
+            <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="130.5" x2="130.5" y1="12" y2="490.602">
+              <stop offset="0" stop-color="#00efd1"></stop>
+              <stop offset="1" stop-color="#00acea"></stop>
+            </linearGradient>
+            <linearGradient id="b" x1="255.5" x2="255.5" xlink:href="#a" y1="12" y2="490.602"></linearGradient>
+            <linearGradient id="c" x1="380.5" x2="380.5" xlink:href="#a" y1="12" y2="490.602"></linearGradient>
+            <path d="m172 76h-83a10 10 0 0 0 -10 10v83a10 10 0 0 0 10 10h83a10 10 0 0 0 10-10v-83a10 10 0 0 0 -10-10zm-9 84h-64v-64h64z" fill="currentColor"></path>
+            <path d="m297 76h-83a10 10 0 0 0 -10 10v83a10 10 0 0 0 10 10h83a10 10 0 0 0 10-10v-83a10 10 0 0 0 -10-10zm-9 84h-64v-64h64z" fill="currentColor"></path>
+            <path d="m172 202h-83a10 10 0 0 0 -10 10v83a10 10 0 0 0 10 10h83a10 10 0 0 0 10-10v-83a10 10 0 0 0 -10-10zm-9 83h-64v-63h64z" fill="currentColor"></path>
+            <path d="m297 202h-83a10 10 0 0 0 -10 10v83a10 10 0 0 0 10 10h83a10 10 0 0 0 10-10v-83a10 10 0 0 0 -10-10zm-9 83h-64v-63h64z" fill="currentColor"></path>
+            <path d="m422 76h-83a10 10 0 0 0 -10 10v83a10 10 0 0 0 10 10h83a10 10 0 0 0 10-10v-83a10 10 0 0 0 -10-10zm-9 84h-64v-64h64z" fill="currentColor"></path>
+            <path d="m422 202h-83a10 10 0 0 0 -10 10v83a10 10 0 0 0 10 10h83a10 10 0 0 0 10-10v-83a10 10 0 0 0 -10-10zm-9 83h-64v-63h64z" fill="currentColor"></path>
+            <path d="m172 332h-83a10 10 0 0 0 -10 10v83a10 10 0 0 0 10 10h83a10 10 0 0 0 10-10v-83a10 10 0 0 0 -10-10zm-9 84h-64v-64h64z" fill="currentColor"></path>
+            <path d="m297 332h-83a10 10 0 0 0 -10 10v83a10 10 0 0 0 10 10h83a10 10 0 0 0 10-10v-83a10 10 0 0 0 -10-10zm-9 84h-64v-64h64z" fill="currentColor"></path>
+            <path d="m422 332h-83a10 10 0 0 0 -10 10v83a10 10 0 0 0 10 10h83a10 10 0 0 0 10-10v-83a10 10 0 0 0 -10-10zm-9 84h-64v-64h64z" fill="currentColor"></path>
+          </svg>
+          Apps
+        </a>
+      </div>
+
+      <div class="topnav-icons">
+        <a class="item" href="https://github.com/marko-simic/qa-playground-tests/blob/main/tests/budget-tracker.spec.js" style="flex-direction: row; margin-right: 30px">
+          <div class="" style="display: flex; padding-right: 5px; padding-bottom: 2px">
+            <img src="../../playwright-logo.svg" alt="Playwright logo">
+          </div>
+          <b class="">View Test Suite</b>
+        </a>
+      </div>
+    </nav>
+
+    <main role="main">
+      <div class="flex-center" style="margin-top: 2vh">
+        <div id="app">
+            <table class="budget-tracker">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="entries">
+            <tr>
+                <td>
+                    <input class="input input-date" type="date">
+                </td>
+                <td>
+                    <input class="input input-description" type="text" placeholder="Add a Description (e.g. wages, bills, etc.)">
+                </td>
+                <td>
+                    <select class="input input-type">
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" class="input input-amount">
+                </td>
+                <td>
+                    <button type="button" class="delete-entry">✕</button>
+                </td>
+            </tr>
+        </tbody>
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="controls">
+                            <button type="button" class="btn btn-green-outline new-entry">New Entry</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="summary">
+                            <strong>Total:</strong>
+                            <span class="total">-$1,500.00</span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+      </div>
+    </main>
+
+    <footer style="margin-top: auto">
+      <div class="text-sm">
+        All the credit for this mini-app goes to
+        <a href="https://github.com/dcode-youtube/budget-tracker-with-javascript" target="_blank">Domenic
+        </a>
+      </div>
+    </footer>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;fc1cd86b1e8d4741a14ea565bbaf23c7&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+</body></html>
