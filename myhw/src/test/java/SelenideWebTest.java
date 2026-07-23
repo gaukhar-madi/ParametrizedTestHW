@@ -2,10 +2,7 @@ import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
@@ -21,9 +18,9 @@ public class SelenideWebTest {
         Configuration.browserSize = "1920x1080";
     }
 
-    @AfterAll
-    static void quit() {
-
+    @AfterEach
+    void tearDown() {
+        Selenide.closeWebDriver();
     }
 
     @ValueSource(strings = {
